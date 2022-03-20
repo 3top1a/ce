@@ -3,6 +3,9 @@ xkb_symbols "basic" {
     name[Group1]= "Czechish";
 
     // Mine kekw
+    // 3top1a
+    // The Unlicense
+    
 
     key <TLDE> {	[     grave,	asciitilde	]	};
     key <AE01> {	[	  equal,	exclam 		]	};
