@@ -21,6 +21,27 @@ just simply put `ce` into `/usr/share/X11/xkb/symbols/` and then
 $ setxkbmap -layout ce
 ```
 
+for KDE Plasma, there are a few more steps required: (from [this excelent answer](https://unix.stackexchange.com/a/763505))
+1) Insert into `/usr/share/X11/xkb/rules/evdev.lst` (about line 375)
+```
+  ce              cz: Czechish
+```
+This will make it search for the `ce` file
+
+2) Insert into `/usr/share/X11/xkb/rules/evdev.xml` (about line 2338)
+```
+# ... in <variantList> of the Czech layout
+        <variant>
+          <configItem>
+            <name>ce</name>
+            <description>Czechish</description>
+          </configItem>
+        </variant>
+```
+
+This adds information about the layout.
+
+
 i3 config
 ```i3
 # ce
